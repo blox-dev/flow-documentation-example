@@ -1,0 +1,100 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Debug Python File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "stopOnEntry": false
+        },
+        {
+            "name": "Debug user",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/user_microservice/user.py",
+            "cwd": "${workspaceFolder}",
+            "env": {},
+            "stopOnEntry": false,
+            "args": [],
+            "presentation": {
+                "hidden": true,
+                "group": "",
+                "order": 1
+            }
+        },
+        {
+            "name": "Debug order",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/order_microservice/order.py",
+            "cwd": "${workspaceFolder}",
+            "env": {},
+            "stopOnEntry": false,
+            "args": [],
+            "presentation": {
+                "hidden": true,
+                "group": "",
+                "order": 1
+            }
+        },
+        {
+            "name": "Debug product",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/product_microservice/product.py",
+            "cwd": "${workspaceFolder}",
+            "env": {},
+            "stopOnEntry": false,
+            "args": [],
+            "presentation": {
+                "hidden": true,
+                "group": "",
+                "order": 1
+            }
+        },
+        {
+            "name": "Debug cart",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/cart_microservice/cart.py",
+            "cwd": "${workspaceFolder}",
+            "env": {},
+            "stopOnEntry": false,
+            "args": [],
+            "presentation": {
+                "hidden": true,
+                "group": "",
+                "order": 1
+            }
+        },
+        {
+            "name": "Debug payment",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/payment_microservice/payment.py",
+            "cwd": "${workspaceFolder}",
+            "env": {},
+            "stopOnEntry": false,
+            "args": [],
+            "presentation": {
+                "hidden": true,
+                "group": "",
+                "order": 1
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Debug All Microservices",
+            "configurations": [
+                "Debug user",
+                "Debug order",
+                "Debug product",
+                "Debug cart",
+                "Debug payment"
+            ]
+        }
+    ]
+}
