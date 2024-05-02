@@ -4,7 +4,7 @@
 
 Step 0. Clone this repository.
 
-Step 1. Install VSCode.
+Step 1. Install [VSCode](https://code.visualstudio.com).
 
 Step 2. Install `flow-documentation` from the VSCode extensions tab.
 

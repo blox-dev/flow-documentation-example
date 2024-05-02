@@ -4,7 +4,7 @@
 
 Step 0. [Download the `flow-documentation` extension.](../README.md)
 
-Step 1. Download a copy of the `Odoo` repository to your machine. The latest version of `Odoo` is available [here](`https://github.com/odoo/odoo`).
+Step 1. Download a copy of the `Odoo` repository to your machine. The latest version of `Odoo` is available [here](https://github.com/odoo/odoo).
 
 (We tested this extension on the most recent functional version of Odoo as of [April 24, 2020](https://github.com/odoo/odoo/tree/436be43d49260c905d37927b21b75404f4ccfc1f))
 
