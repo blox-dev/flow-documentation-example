@@ -76,7 +76,7 @@ def populate_cart_table():
 create_cart_table(reset=True)
 populate_cart_table()
 
-@app.route('/cart/add', methods=['POST'])
+@app.route('/cart/add', methods=['POST', 'PUT'])
 def add_item_to_cart():
     data = request.json
     user_id = data.get('user_id')

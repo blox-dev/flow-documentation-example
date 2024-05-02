@@ -8,14 +8,19 @@ PORT_CART = "9052"
 PORT_ORDER = "9053"
 PORT_PAYMENT = "9054"
 
-def buy_cart(user_id):
-    user_id = str(user_id)
+def check_user_exists(user_id):
     # Check if user_id exists
     user_response = requests.get(SERVER + PORT_USER + "/users/" + user_id)
     if user_response.status_code != 200:
         print("User does not exist.")
         return False
+    return user_response
 
+#flow-start(buy-app)
+def buy_cart(user_id):
+    user_id = str(user_id)
+
+    user_response = check_user_exists(user_id)
     user_data = user_response.json()
 
     # Get all the cart lines associated with that user made in the last 24 hours

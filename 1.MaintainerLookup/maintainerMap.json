@@ -1,0 +1,815 @@
+[
+    {
+        "contact": {
+            "name": "Antoine Dubois",
+            "team": "R&D - Accounting",
+            "position": "Developer",
+            "email": "antoine_dubois@example.com",
+            "discord": "antoine_dubois#0000",
+            "github": "antoine_dubois"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "account"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Sophie Martin",
+            "team": "R&D - HR",
+            "position": "Product Owner",
+            "email": "sophie_martin@example.com",
+            "discord": "sophie_martin#0000",
+            "github": "sophie_martin"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "hr_holidays"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "hr_appraisal"
+            },
+            {
+                "type": "folder",
+                "path": "addons/hr/models"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "hr_recruitment"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "attendance"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "hr_recruitment"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "hr_attendance"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "fleet"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "referral"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "approvals"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "lunch"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "hr_attendance"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Lucas Chevalier",
+            "team": "R&D - HR",
+            "position": "Team Leader",
+            "email": "lucas_chevalier@example.com",
+            "discord": "lucas_chevalier#0000",
+            "github": "lucas_chevalier"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "hr"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "payroll"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "salary"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Camille Moreau",
+            "team": "R&D - Project",
+            "position": "Developer",
+            "email": "camille_moreau@example.com",
+            "discord": "camille_moreau#0000",
+            "github": "camille_moreau"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "project"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "helpdesk"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "timesheet"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "industry_fsm"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "planning"
+            },
+            {
+                "type": "folder",
+                "path": "addons/note"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Mathilde Laurent",
+            "team": "R&D - Service",
+            "position": "Product Owner",
+            "email": "mathilde_laurent@example.com",
+            "discord": "mathilde_laurent#0000",
+            "github": "mathilde_laurent"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "path": "service"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Julien Lefevre",
+            "team": "R&D - Marketing",
+            "position": "Team Leader",
+            "email": "julien_lefevre@example.com",
+            "discord": "julien_lefevre#0000",
+            "github": "julien_lefevre"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "marketing_automation"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "mass_mailing"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "sms"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "gmail"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "outlook"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "sms"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Aurélie Girard",
+            "team": "R&D - Marketing",
+            "position": "Developer",
+            "email": "aurelie_girard@example.com",
+            "discord": "aurelie_girard#0000",
+            "github": "aurelie_girard"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "marketing"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "crm"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "knowledge"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "appointment"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Théo Renault",
+            "team": "R&D - Website",
+            "position": "Product Owner",
+            "email": "theo_renault@example.com",
+            "discord": "theo_renault#0000",
+            "github": "theo_renault"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "website"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "web_editor"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Charlotte Dubois",
+            "team": "R&D - Website",
+            "position": "Team Leader",
+            "email": "charlotte_dubois@example.com",
+            "discord": "charlotte_dubois#0000",
+            "github": "charlotte_dubois"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "web_editor"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "blog"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Maxime Bernard",
+            "team": "R&D - Stock",
+            "position": "Developer",
+            "email": "maxime_bernard@example.com",
+            "discord": "maxime_bernard#0000",
+            "github": "maxime_bernard"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "stock"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "barcode"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Élodie Lambert",
+            "team": "R&D - Purchase",
+            "position": "Product Owner",
+            "email": "elodie_lambert@example.com",
+            "discord": "elodie_lambert#0000",
+            "github": "elodie_lambert"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "purchase"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "delivery_"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Nathan Simon",
+            "team": "R&D - Accounting",
+            "position": "Team Leader",
+            "email": "nathan_simon@example.com",
+            "discord": "nathan_simon#0000",
+            "github": "nathan_simon"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "account"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Léa Michel",
+            "team": "R&D - Localization",
+            "position": "Developer",
+            "email": "lea_michel@example.com",
+            "discord": "lea_michel#0000",
+            "github": "lea_michel"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "l10n"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Hugo Rousseau",
+            "team": "R&D - Events",
+            "position": "Product Owner",
+            "email": "hugo_rousseau@example.com",
+            "discord": "hugo_rousseau#0000",
+            "github": "hugo_rousseau"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "event"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "social"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "rent"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Emma Martin",
+            "team": "R&D - Events",
+            "position": "Team Leader",
+            "email": "emma_martin@example.com",
+            "discord": "emma_martin#0000",
+            "github": "emma_martin"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "event"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "social"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Enzo Leroy",
+            "team": "R&D - POS",
+            "position": "Developer",
+            "email": "enzo_leroy@example.com",
+            "discord": "enzo_leroy#0000",
+            "github": "enzo_leroy"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "rent"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "sale"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "quotation"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "loyalty"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "subscription"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "amazon"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "ebay"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "online_payment"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "calendar"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Chloé Moreau",
+            "team": "R&D - Localization",
+            "position": "Product Owner",
+            "email": "chloe_moreau@example.com",
+            "discord": "chloe_moreau#0000",
+            "github": "chloe_moreau"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "l10n"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Lola Leroux",
+            "team": "R&D - Stock",
+            "position": "Developer",
+            "email": "lola_leroux@example.com",
+            "discord": "lola_leroux#0000",
+            "github": "lola_leroux"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "mrp"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "repair"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "maintenance"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "plm"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "quality"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Romain Fournier",
+            "team": "R&D - Website",
+            "position": "Product Owner",
+            "email": "romain_fournier@example.com",
+            "discord": "romain_fournier#0000",
+            "github": "romain_fournier"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "spreadsheet"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "document"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "website_slides"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "survey"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "portal"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "signup"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "auth"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "gamification"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "digest"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "forum"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "sign"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Clara Dupont",
+            "team": "R&D - HR",
+            "position": "Team Leader",
+            "email": "clara_dupont@example.com",
+            "discord": "clara_dupont#0000",
+            "github": "clara_dupont"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "expense"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Louis Lefevre",
+            "team": "R&D - Discuss",
+            "position": "Developer",
+            "email": "louis_lefevre@example.com",
+            "discord": "louis_lefevre#0000",
+            "github": "louis_lefevre"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "discuss"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "livechat"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "voip"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "website_sale"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Manon Girard",
+            "team": "R&D - Discuss",
+            "position": "Product Owner",
+            "email": "manon_girard@example.com",
+            "discord": "manon_girard#0000",
+            "github": "manon_girard"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "discuss"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Gabriel Mercier",
+            "team": "R&D - Website",
+            "position": "Team Leader",
+            "email": "gabriel_mercier@example.com",
+            "discord": "gabriel_mercier#0000",
+            "github": "gabriel_mercier"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "website_sale"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Juliette Dupuis",
+            "team": "R&D - Discuss",
+            "position": "Developer",
+            "email": "juliette_dupuis@example.com",
+            "discord": "juliette_dupuis#0000",
+            "github": "juliette_dupuis"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "voip"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Lucie Renaud",
+            "team": "R&D - Studio",
+            "position": "Product Owner",
+            "email": "lucie_renaud@example.com",
+            "discord": "lucie_renaud#0000",
+            "github": "lucie_renaud"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "studio"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "/security"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "mobile"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "import"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "export"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "iap"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "studio"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "snailmail"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "sms"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "partner_autocomplete"
+            },
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "industry"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Tom Lemoine",
+            "team": "R&D - Industry",
+            "position": "Team Leader",
+            "email": "tom_lemoine@example.com",
+            "discord": "tom_lemoine#0000",
+            "github": "tom_lemoine"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "industry"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Inès Martinez",
+            "team": "R&D - IAP",
+            "position": "Developer",
+            "email": "ines_martinez@example.com",
+            "discord": "ines_martinez#0000",
+            "github": "ines_martinez"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "iap"
+            }
+        ]
+    },
+    {
+        "contact": {
+            "name": "Arthur Martin",
+            "team": "R&D - Studio",
+            "position": "Product Owner",
+            "email": "arthur_martin@example.com",
+            "discord": "arthur_martin#0000",
+            "github": "arthur_martin"
+        },
+        "maintains": [
+            {
+                "type": "folder",
+                "regex": true,
+                "path": "studio"
+            }
+        ]
+    }
+]
