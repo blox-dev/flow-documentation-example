@@ -46,10 +46,6 @@ def buy_cart(user_id):
             print("One or more cart lines are not active.")
             return False
 
-    # Check if any of those products have been ordered in the last 5 minutes
-    cart_lines_5min = [line for line in cart_lines_active if (current_time - datetime.strptime(line['date_added'], '%Y-%m-%d %H:%M:%S')) <= timedelta(minutes=5)]
-    ordered_products_count = len(cart_lines_5min)
-
     # Call the cart microservice again and purchase the items in the cart
     purchase_response = requests.put(SERVER + PORT_CART + "/cart/purchase/" + user_id)
     if purchase_response.status_code != 200:
@@ -61,7 +57,7 @@ def buy_cart(user_id):
         'user_id': user_id,
         'order_date': current_time.strftime('%Y-%m-%d %H:%M:%S'),
         'status': 'pending',
-        'total_price': sum(line['total_price'] for line in cart_lines_24h),
+        'order_lines': cart_lines_24h,
         'payment_method': 'cash on delivery',
         'payment_status': 'pending'
     }
@@ -72,13 +68,22 @@ def buy_cart(user_id):
         return False
 
     order_id = create_order_response.json().get('order_id')
+    order_id = str(order_id)
+    # Get order by id to receive calculated total price
+
+    order_response = requests.get(SERVER + PORT_ORDER + "/orders/" + order_id)
+    if order_response.status_code != 200:
+        print("Error creating pending order.")
+        return False
+    
+    order_amount = order_response.json().get('total_price')
 
     # Create a pending payment invitation through the payment microservice
     payment_data = {
         'order_id': order_id,
         'user_id': user_id,
+        'amount': order_amount,
         'payment_method': 'cash on delivery',  # Assuming user has a default payment method
-        'amount': order_data['total_price'],
         'transaction_date': current_time.strftime('%Y-%m-%d %H:%M:%S'),
         'status': 'pending'
     }

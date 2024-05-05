@@ -73,11 +73,14 @@ populate_orders_table()
 def place_order():
     data = request.json
     user_id = data.get('user_id')
-    total_price = data.get('total_price')
+    order_lines = data.get('order_lines')
     payment_method = data.get('payment_method')
     current_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     status = 'pending'  # Default status for newly placed orders
     payment_status = 'pending'  # Default payment status
+
+    tax = 3 # The default tax rate
+    total_price = sum(line['total_price'] * (1 + tax/100) for line in order_lines)
 
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
@@ -116,7 +119,7 @@ def get_order_by_id(order_id):
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
 
-    cursor.execute('''SELECT * FROM orders WHERE order_id=?''', (order_id,))
+    cursor.execute('''SELECT * FROM orders WHERE id=?''', (order_id,))
     order = cursor.fetchone()
     conn.close()
 
