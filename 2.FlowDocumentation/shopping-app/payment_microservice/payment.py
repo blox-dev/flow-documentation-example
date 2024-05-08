@@ -76,7 +76,7 @@ def process_payment():
     user_id = data.get('user_id')
     payment_method = data.get('payment_method')
     amount = data.get('amount')
-    transaction_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    transaction_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S') # Use current time as payment date
     status = 'pending'  # Default status for newly initiated payments
 
     conn = sqlite3.connect(DATABASE)

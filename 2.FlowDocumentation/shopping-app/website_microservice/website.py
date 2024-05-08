@@ -85,7 +85,6 @@ def buy_cart(user_id):
         'user_id': user_id,
         'amount': order_amount,
         'payment_method': 'cash on delivery',  # Assuming user has a default payment method
-        'transaction_date': current_time.strftime('%Y-%m-%d %H:%M:%S'),
         'status': 'pending'
     }
 

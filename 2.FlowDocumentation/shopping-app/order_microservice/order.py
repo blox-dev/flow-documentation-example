@@ -75,7 +75,7 @@ def place_order():
     user_id = data.get('user_id')
     order_lines = data.get('order_lines')
     payment_method = data.get('payment_method')
-    current_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    current_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S') # Use current time as order date
     status = 'pending'  # Default status for newly placed orders
     payment_status = 'pending'  # Default payment status
 
