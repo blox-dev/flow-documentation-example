@@ -16,7 +16,7 @@ def check_user_exists(user_id):
         return False
     return user_response
 
-#flow-start(buy-app)
+#flow-start(buy-cart)
 def buy_cart(user_id):
     user_id = str(user_id)
 
@@ -76,7 +76,8 @@ def buy_cart(user_id):
         print("Error creating pending order.")
         return False
     
-    order_amount = order_response.json().get('total_price')
+    order = order_response.json()
+    order_amount = order.get('total_price')
 
     # Create a pending payment invitation through the payment microservice
     payment_data = {
