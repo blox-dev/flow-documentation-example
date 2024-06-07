@@ -69,30 +69,6 @@ def populate_payments_table():
 create_payments_table(reset=True)
 populate_payments_table()
 
-@app.route('/payments/process', methods=['POST'])
-def process_payment():
-    data = request.json
-    order_id = data.get('order_id')
-    user_id = data.get('user_id')
-    payment_method = data.get('payment_method')
-    amount = data.get('amount')
-    transaction_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S') # Use current time as payment date
-    status = 'pending'  # Default status for newly initiated payments
-
-    conn = sqlite3.connect(DATABASE)
-    cursor = conn.cursor()
-
-    try:
-        cursor.execute('''INSERT INTO payments (order_id, user_id, payment_method, amount, transaction_date, status)
-                          VALUES (?, ?, ?, ?, ?, ?)''',
-                       (order_id, user_id, payment_method, amount, transaction_date, status))
-        conn.commit()
-        conn.close()
-        return jsonify({'message': 'Payment processed successfully'}), 201
-    except sqlite3.Error as e:
-        conn.close()
-        return jsonify({'error': str(e)}), 400
-
 @app.route('/payments/update_status/<int:payment_id>', methods=['PUT'])
 def update_payment_status(payment_id):
     data = request.json
@@ -157,6 +133,31 @@ def get_payments_by_user_id(user_id):
         payment_list.append(payment_data)
 
     return jsonify(payment_list), 200
+
+@app.route('/payments/process', methods=['POST'])
+def process_payment():
+    data = request.json
+    order_id = data.get('order_id')
+    user_id = data.get('user_id')
+    payment_method = data.get('payment_method')
+    amount = data.get('amount')
+    transaction_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S') # Use current time as payment date
+    status = 'pending'  # Default status for newly initiated payments
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    try:
+        cursor.execute('''INSERT INTO payments (order_id, user_id, payment_method, amount, transaction_date, status)
+                          VALUES (?, ?, ?, ?, ?, ?)''',
+                       (order_id, user_id, payment_method, amount, transaction_date, status))
+        conn.commit()
+        conn.close()
+        return jsonify({'message': 'Payment processed successfully'}), 201
+    except sqlite3.Error as e:
+        conn.close()
+        return jsonify({'error': str(e)}), 400
+
 
 @app.route('/payments/status/<string:status>', methods=['GET'])
 def get_payments_by_status(status):

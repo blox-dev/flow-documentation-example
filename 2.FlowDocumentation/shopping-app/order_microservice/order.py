@@ -69,34 +69,6 @@ def populate_orders_table():
 create_orders_table(reset=True)
 populate_orders_table()
 
-@app.route('/orders/place', methods=['POST'])
-def place_order():
-    data = request.json
-    user_id = data.get('user_id')
-    order_lines = data.get('order_lines')
-    payment_method = data.get('payment_method')
-    current_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S') # Use current time as order date
-    status = 'pending'  # Default status for newly placed orders
-    payment_status = 'pending'  # Default payment status
-
-    tax = 3 # The default tax rate
-    total_price = sum(line['total_price'] * (1 + tax/100) for line in order_lines)
-
-    conn = sqlite3.connect(DATABASE)
-    cursor = conn.cursor()
-
-    try:
-        cursor.execute('''INSERT INTO orders (user_id, order_date, status, total_price, payment_method, payment_status)
-                          VALUES (?, ?, ?, ?, ?, ?)''',
-                       (user_id, current_date, status, total_price, payment_method, payment_status))
-        new_order_id = cursor.lastrowid
-        conn.commit()
-        conn.close()
-        return jsonify({'message': 'Order placed successfully', 'order_id': new_order_id}), 201
-    except sqlite3.Error as e:
-        conn.close()
-        return jsonify({'error': str(e)}), 400
-
 @app.route('/orders/update_status/<int:order_id>', methods=['PUT'])
 def update_order_status(order_id):
     data = request.json
@@ -219,6 +191,35 @@ def get_total_revenue():
     conn.close()
 
     return jsonify({'total_revenue': total_revenue}), 200
+
+@app.route('/orders/place', methods=['POST'])
+def place_order():
+    data = request.json
+    user_id = data.get('user_id')
+    order_lines = data.get('order_lines')
+    payment_method = data.get('payment_method')
+    current_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S') # Use current time as order date
+    status = 'pending'  # Default status for newly placed orders
+    payment_status = 'pending'  # Default payment status
+
+    tax = 3 # The default tax rate
+    total_price = sum(line['total_price'] * (1 + tax/100) for line in order_lines)
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    try:
+        cursor.execute('''INSERT INTO orders (user_id, order_date, status, total_price, payment_method, payment_status)
+                          VALUES (?, ?, ?, ?, ?, ?)''',
+                       (user_id, current_date, status, total_price, payment_method, payment_status))
+        new_order_id = cursor.lastrowid
+        conn.commit()
+        conn.close()
+        return jsonify({'message': 'Order placed successfully', 'order_id': new_order_id}), 201
+    except sqlite3.Error as e:
+        conn.close()
+        return jsonify({'error': str(e)}), 400
+
 
 @app.route('/orders/cancel/<int:order_id>', methods=['PUT'])
 def cancel_order(order_id):

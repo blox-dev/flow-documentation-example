@@ -120,6 +120,31 @@ def login_user():
         return jsonify(user_data), 200
     else:
         return jsonify({'error': 'Invalid username or password'}), 401
+    
+# Function to retrieve user information by username
+@app.route('/users/username/<string:username>', methods=['GET'])
+def get_user_by_username(username):
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    cursor.execute('''SELECT * FROM users WHERE username=?''', (username,))
+    user = cursor.fetchone()
+    conn.close()
+
+    if user:
+        user_data = {
+            'id': user[0],
+            'username': user[1],
+            'email': user[2],
+            'full_name': user[4],
+            'registration_date': user[5],
+            'account_status': user[6],
+            'role': user[7]
+        }
+        return jsonify(user_data), 200
+    else:
+        return jsonify({'error': 'User not found'}), 404
+    
 
 # Function to retrieve user information by user ID
 @app.route('/users/<int:user_id>', methods=['GET'])
@@ -147,30 +172,6 @@ def get_user_by_id(user_id):
         return jsonify(user_data), 200
     else:
         # If user does not exist, return error message
-        return jsonify({'error': 'User not found'}), 404
-    
-# Function to retrieve user information by username
-@app.route('/users/username/<string:username>', methods=['GET'])
-def get_user_by_username(username):
-    conn = sqlite3.connect(DATABASE)
-    cursor = conn.cursor()
-
-    cursor.execute('''SELECT * FROM users WHERE username=?''', (username,))
-    user = cursor.fetchone()
-    conn.close()
-
-    if user:
-        user_data = {
-            'id': user[0],
-            'username': user[1],
-            'email': user[2],
-            'full_name': user[4],
-            'registration_date': user[5],
-            'account_status': user[6],
-            'role': user[7]
-        }
-        return jsonify(user_data), 200
-    else:
         return jsonify({'error': 'User not found'}), 404
 
 # Function to retrieve all users
